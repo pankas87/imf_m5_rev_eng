@@ -5,8 +5,8 @@
 ### Compilar
 
 > ```bash
->    # Compilación regular, indicando nombre de archivo con flag -o
->    gcc loop.c -o loop
+>   # Compilación regular, indicando nombre de archivo con flag -o
+>   gcc loop.c -o loop
 >
 >   # Compilación incluyengo información de depuración (debugging)
 >   gcc -g loop.c -o loop
@@ -19,17 +19,17 @@
 
 ### Ejecución
 > ```bash
->    # Desensamblando archivo ejecutable
->    gdb loop
+>   # Desensamblando archivo ejecutable
+>   gdb loop
 > 
 > ```
 
 ### Desensamblado y Análisis
 > ```bash
->    # Configurando la sintaxis Intel para el lenguaje de desensamblado
->    set disassembly-flavor intel
->    # Desensamblando
->    disassemble main
+>   # Configurando la sintaxis Intel para el lenguaje de desensamblado
+>   set disassembly-flavor intel
+>   # Desensamblando
+>   disassemble main
 > ```
 
 ## Enlaces de interés

@@ -3,12 +3,12 @@
 ## Instrucciones Lógicas
 
 > ```asm
->    cmp destination, source
->    ; Realiza una comparación. Es idéntica la instrucción sub exceptuando que no afecta los operandos.
->    ; Impacta el Zero Flag (ZF) y el Carry Flag (CF) de la siguiente forma:
->    ;  - dest = src <=> ZF: 1, CF: 0
->    ;  - dest < src <=> ZF: 0, CF: 1
->    ;  - dest > src <=> ZF: 0, CF: 0
+>   cmp destination, source
+>   ; Realiza una comparación. Es idéntica la instrucción sub exceptuando que no afecta los operandos.
+>   ; Impacta el Zero Flag (ZF) y el Carry Flag (CF) de la siguiente forma:
+>   ;  - dest = src <=> ZF: 1, CF: 0
+>   ;  - dest < src <=> ZF: 0, CF: 1
+>   ;  - dest > src <=> ZF: 0, CF: 0
 > ```
 
 |
@@ -16,8 +16,8 @@
 ## Instrucciones que Modifican el Flujo de Ejecución
 
 > ```asm
->    jmp 0x11a3 <main+90>
->    ;jmp -> Salto incondicional, transfiere el flujo de ejecución al cambiar el puntero de instrucción (Program Counter / Instruction Pointer)
+>   jmp 0x11a3 <main+90>
+>   ;jmp -> Salto incondicional, transfiere el flujo de ejecución al cambiar el puntero de instrucción (Program Counter / Instruction Pointer)
 >
 >   call 0x1030 <printf@plt>
 >   ;call -> LLamado a una función o procedimiento remoto (Ubicado en otra librería)
