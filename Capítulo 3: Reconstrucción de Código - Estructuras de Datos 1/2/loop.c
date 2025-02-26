@@ -7,7 +7,7 @@ int main(int argc, char*argv[]) {
 
     for ( count = 0; count < 8; count++ ) {
         printf("Inserte un dato: ");
-        scanf("%c", &buffer[count]);
+        scanf(" %c", &buffer[count]);
     }
     return 0;
 }

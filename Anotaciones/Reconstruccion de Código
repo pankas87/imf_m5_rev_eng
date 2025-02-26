@@ -1,0 +1,43 @@
+# Reconstrucción y Desensamblado
+
+## GCC
+
+### Compilar
+
+> ```bash
+>    # Compilación regular, indicando nombre de archivo con flag -o
+>    gcc loop.c -o loop
+>
+>   # Compilación incluyengo información de depuración (debugging)
+>   gcc -g loop.c -o loop
+>
+>   # Compición para arquitectura específica
+>   gcc variables.c -m32 -o variables-32
+> ```
+
+## GDB
+
+### Ejecución
+> ```bash
+>    # Desensamblando archivo ejecutable
+>    gdb loop
+> 
+> ```
+
+### Desensamblado y Análisis
+> ```bash
+>    # Configurando la sintaxis Intel para el lenguaje de desensamblado
+>    set disassembly-flavor intel
+>    # Desensamblando
+>    disassemble main
+> ```
+
+## Enlaces de interés
+
+### GCC
+
+- Linux Handbook: [GCC Flags](https://linuxhandbook.com/gcc-flags/)
+- Kali Linux Docs: [GCC - ARM Cross Compilation Environment](https://www.kali.org/docs/development/arm-cross-compilation-environment/)
+- VisualGDB: [GDB - Reference - Commands](https://visualgdb.com/gdbreference/commands/)
+
+# Estructuras de Datos
