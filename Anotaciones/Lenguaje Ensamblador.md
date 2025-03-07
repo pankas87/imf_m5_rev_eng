@@ -1,5 +1,24 @@
 # Lenguaje Ensamblador
 
+## Tipos de datos
+
+### x86 (32 bits)
+
+| Tipo               | Ancho en bits | Valor mínimo         | Valor máximo         |
+|--------------------|---------------|----------------------|----------------------|
+| signedchar         | 8             | -128                 | 127                  |
+| unsigned char      | 8             | 0                    | 255                  |
+| short              | 16            | -32768               | 32767                |
+| unsigned short     | 16            | 0                    | 65535                |
+| int                | 32            | -2147483648          | 2147483647           |
+| unsigned int       | 32            | 0                    | 4294967295           |
+| long               | 32            | -2147483648          | 2147483647           |
+| unsigned long      | 32            | 0                    | 4294967295           |
+| long long          | 64            | -9223372036854775808 | 9223372036854775807  |
+| unsigned long long | 64            | 0                    | 18446744073709551615 |
+
+
+
 ## Instrucciones Lógicas
 
 > ```asm
@@ -30,6 +49,8 @@
 >   ; Salto condicional ubicado luego de una prueba lógica, como una comparación (cmp)
 >   ; Ejecuta un salto de comparación con signo si en la ejecución de cmp el operando de destino es menor o igual que el de origen
 > ```
+
+## Punteros
 
 ## Punteros (x86)
 
