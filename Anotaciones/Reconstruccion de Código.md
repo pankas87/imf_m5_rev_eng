@@ -18,6 +18,7 @@
     - Genera un archivo intermedio con la extensión *.o (Archivo de código objeto)
 * **Enlazado**:
     - Toma el código objeto resultante de la fase anterior y lo une a las librerías y lo modifica para que sea ejecutable en la plataforma.
+    - Genera un archivo intermedio con la extensión *.out
 
 ### Compilar
 
@@ -32,7 +33,9 @@
 >   # Compilación incluyengo información de depuración (debugging)
 >   gcc -g loop.c -o loop
 >
->   # Compición para arquitectura específica
+>   # Compilación para arquitectura específica
+>   #   - Incluye instalación de librerías de cross-compiling de GCC y G++ (Multilib)
+>   apt install gcc-multilib g++-multilib
 >   gcc variables.c -m32 -o variables-32
 > ```
 
