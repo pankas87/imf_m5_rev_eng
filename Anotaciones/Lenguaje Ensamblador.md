@@ -30,45 +30,67 @@ En las arquitecturas de 64 bits hay varias opciones y cada compilador opta por u
 | long long | N/A   | 64      | 64   | 64    | 64    |
 | pointer   | 32    | 32      | 64   | 64    | 64    |
 
-## Instrucciones Lógicas
+## Sintaxis y Operandos
 
-> ```asm
->   cmp destination, source
->   ; Realiza una comparación. Es idéntica la instrucción sub exceptuando que no afecta los operandos.
->   ; Impacta el Zero Flag (ZF) y el Carry Flag (CF) de la siguiente forma:
->   ;  - dest = src <=> ZF: 1, CF: 0
->   ;  - dest < src <=> ZF: 0, CF: 1
->   ;  - dest > src <=> ZF: 0, CF: 0
-> ```
+Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
-|
+### Tamaños de Palabra
 
-## Instrucciones que Modifican el Flujo de Ejecución
+| Nombre         | Identificador | Tamaño              |
+|----------------|---------------|---------------------|
+| Word           | WORD          | 2 bytes (16 bits)   |
+| Double Word    | DWORD         | 4 bytes (32 buts)   |
+| Quadruple Word | QWORD         | 8 bytes (64 bits)   |
+| Paragraph      |               | 16 bytes (128 bits) |
 
-> ```asm
->   jmp 0x11a3 <main+90>
->   ;jmp -> Salto incondicional, transfiere el flujo de ejecución al cambiar el puntero de instrucción (Program Counter / Instruction Pointer)
->
->   call 0x1030 <printf@plt>
->   ;call -> LLamado a una función o procedimiento remoto (Ubicado en otra librería)
->   ;     -> Dos Operaciones:
->   ;       1.- Empuja la dirección de retorno (Dirección ubicado luego de la instrucción call) hacia el stack.
->   ;       2.- Cambia el EIP hacia el destino invocado. Esto transfiere el control hacia la función invocada y comienza la ejecución allí.
->
->   cmp DWORD PTR [rbp-0x4], 0x7
->   jle 0x1168 <main+31>
->   ; Salto condicional ubicado luego de una prueba lógica, como una comparación (cmp)
->   ; Ejecuta un salto de comparación con signo si en la ejecución de cmp el operando de destino es menor o igual que el de origen
-> ```
+### Operandos
 
-## Punteros
+## Registros
 
-## Punteros (x86)
+### Registros X86
 
-## Punteros (x86_64)
+### Registros X86_64
 
-## Punteros (arm)
+### Registros ARM
+
+## Instrucciones
+
+### Instrucciones Lógicas
+
+| Instrucción | Sintaxis                | Funcionamiento                                                                                                             |
+|-------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| cmp         | cmp destination, source | Se usa para efectuar una comparación. Idéntica a la instrucción sub, sin afectar operandos. Impacta el ZF y CF <sup>1</sup>|
+
+<sup>1</sup> Impacta el Zero Flag y Carry Flag:
+
+| cmp dst, src | ZF | CF |
+|--------------|----|----|
+|  dst == src  |  1 |  0 |
+|   dst < src  |  0 |  1 |
+|   dst > src  |  0 |  0 |
+
+### Manejo de Memoria
+
+| Instrucción | Sintaxis                | Funcionamiento                                                     |
+|-------------|-------------------------|--------------------------------------------------------------------|
+| mov         | mov destination, source | Se usa para mover data hacia los registros o la RAM.               |
+| push        | push value              | Mueve valores hacia la pila (stack).                               |
+| pop         | pop register            | Restaura un valor de la cima de la pila (stacj) hacia un registro. |
+
+### Instrucciones que Modifican el Flujo de Ejecución
+
+| Instrucción | Sintaxis                | Funcionamiento                                                                                                             |
+|-------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| jmp         | jmp destination         | Salto incondicional hacia otra sección del código, transfiere el flujo de ejecución al cambiar el puntero de instrucción.  |
+| call        | call destination        | Llamado a una función o procedimiento remoto <sup>2</sup>.                                                                 |
+| jle         | fle destination         | Salto de comparación con signo si en la ejecución de `cmp` el operando de destino es menor o igual que el de origen.       |
+
+<sup>2</sup> `call` ejecuta dos operaciones:
+    - Empuja la dirección de retorno hacia el stack.
+    - Sambia el `eip` hacia el distino invocado.
 
 ## Enlaces de Interés
 
 - Aldeid - Wiki: [x86 Assembly](https://www.aldeid.com/wiki/Category:Architecture/x86-assembly)
+- Unversity of Virnginia - Computer Science: [CS216 - x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
+- Tutorials Point: [Assembly Tutorial](https://www.tutorialspoint.com/assembly_programming/index.htm)
