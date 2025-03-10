@@ -37,6 +37,12 @@
 >   #   - Incluye instalación de librerías de cross-compiling de GCC y G++ (Multilib)
 >   apt install gcc-multilib g++-multilib
 >   gcc variables.c -m32 -o variables-32
+>
+>   # Generar código ensamblador
+>   gcc -S variables.c
+>   # Generar código ensamblador, manteniendo referencia a líneas de código fuente originales en C
+>   gcc -S -fverbose-asm -g -O2 variables.c -o variables_m_64_verbose.s
+>   as -alhnd variables_m_64_verbose.s > variables_m_64_verbose.lst
 > ```
 
 ## GDB

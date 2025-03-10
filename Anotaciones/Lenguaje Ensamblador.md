@@ -17,7 +17,18 @@
 | long long          | 64            | -9223372036854775808 | 9223372036854775807  |
 | unsigned long long | 64            | 0                    | 18446744073709551615 |
 
+### x86_64 (64 bits)
 
+En las arquitecturas de 64 bits hay varias opciones y cada compilador opta por una.
+
+| Tipo      | ILP32 | ILP32LL | LP64 | ILP64 | LLP64 |
+|-----------|-------|---------|------|-------|-------|
+| char      | 8     | 8       | 8    | 8     | 8     |
+| short     | 16    | 16      | 16   | 16    | 16    |
+| int       | 32    | 32      | 32   | 64    | 32    |
+| long      | 32    | 32      | 64   | 64    | 32    |
+| long long | N/A   | 64      | 64   | 64    | 64    |
+| pointer   | 32    | 32      | 64   | 64    | 64    |
 
 ## Instrucciones Lógicas
 

@@ -1,45 +1,45 @@
-		.file	"variables.c"
-		.text
-		.globl	gvar1
-		.data
-		.type	gvar1, @object
-		.size	gvar1, 1
-	gvar1:
-		.byte	17
-		.globl	gvar2
-		.type	gvar2, @object
-		.size	gvar2, 1
-	gvar2:
-		.byte	34
-		.globl	gvar3
-		.align 2
-		.type	gvar3, @object
-		.size	gvar3, 2
-	gvar3:
-		.value	51
-		.globl	gvar4
-		.align 2
-		.type	gvar4, @object
-		.size	gvar4, 2
-	gvar4:
-		.value	68
-		.globl	gvar5
-		.align 4
-		.type	gvar5, @object
-		.size	gvar5, 4
-	gvar5:
-		.long	85
-		.globl	gvar6
-		.align 4
-		.type	gvar6, @object
-		.size	gvar6, 4
-	gvar6:
-		.long	102
-		.globl	gvar7
-		.align 8
-		.type	gvar7, @object
-		.size	gvar7, 8
-	gvar7:
+	.file	"variables.c"
+	.text
+	.globl	gvar1
+	.data
+	.type	gvar1, @object
+	.size	gvar1, 1
+gvar1:
+	.byte	17
+	.globl	gvar2
+	.type	gvar2, @object
+	.size	gvar2, 1
+gvar2:
+	.byte	34
+	.globl	gvar3
+	.align 2
+	.type	gvar3, @object
+	.size	gvar3, 2
+gvar3:
+	.value	51
+	.globl	gvar4
+	.align 2
+	.type	gvar4, @object
+	.size	gvar4, 2
+gvar4:
+	.value	68
+	.globl	gvar5
+	.align 4
+	.type	gvar5, @object
+	.size	gvar5, 4
+gvar5:
+	.long	85
+	.globl	gvar6
+	.align 4
+	.type	gvar6, @object
+	.size	gvar6, 4
+gvar6:
+	.long	102
+	.globl	gvar7
+	.align 8
+	.type	gvar7, @object
+	.size	gvar7, 8
+gvar7:
 	.quad	119
 	.globl	gvar8
 	.align 8
@@ -82,5 +82,5 @@ main:
 	.cfi_endproc
 .LFE0:
 	.size	main, .-main
-	.ident	"GCC: (Debian 12.2.0-14) 12.2.0"
+	.ident	"GCC: (Debian 14.2.0-16) 14.2.0"
 	.section	.note.GNU-stack,"",@progbits

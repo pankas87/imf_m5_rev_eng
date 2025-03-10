@@ -1,0 +1,97 @@
+   1              		.file	"variables.c"
+   2              	# GNU C17 (Debian 14.2.0-16) version 14.2.0 (x86_64-linux-gnu)
+   3              	#	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl v
+   4              	
+   5              	# GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+   6              	# options passed: -mtune=generic -march=x86-64 -g -O2 -fasynchronous-unwind-tables
+   7              		.text
+   8              	.Ltext0:
+   9              		.file 0 "/home/evaristo_estella/Documents/Maestria/M5-Ingenieria-Inversa/imf_m5_rev_eng/Cap\303\25
+  10              		.section	.text.startup,"ax",@progbits
+  11              		.p2align 4
+  12              		.globl	main
+  14              	main:
+  15              	.LVL0:
+  16              	.LFB11:
+  17              		.file 1 "variables.c"
+   1:variables.c   **** # include <stdio.h>
+   2:variables.c   **** 
+   3:variables.c   **** signed char     gvar1 = 0x11;
+   4:variables.c   **** unsigned char   gvar2 = 0x22;
+   5:variables.c   **** short           gvar3 = 0x33;
+   6:variables.c   **** unsigned short  gvar4 = 0x44;
+   7:variables.c   **** int             gvar5 = 0x55;
+   8:variables.c   **** unsigned int    gvar6 = 0x66;
+   9:variables.c   **** long            gvar7 = 0x77;
+  10:variables.c   **** unsigned long   gvar8 = 0x88;
+  11:variables.c   **** long long       gvar9 = 0x99;
+  12:variables.c   **** 
+  13:variables.c   **** int main(int argc, char *argv[]) {
+  18              		.loc 1 13 34 view -0
+  19              		.cfi_startproc
+  14:variables.c   ****     signed char     lvar1 = 0x11;
+  20              		.loc 1 14 5 view .LVU1
+  15:variables.c   ****     unsigned char   lvar2 = 0x22;
+  21              		.loc 1 15 5 view .LVU2
+  16:variables.c   ****     short           lvar3 = 0x33;
+  22              		.loc 1 16 5 view .LVU3
+  17:variables.c   ****     unsigned short  lvar4 = 0x44;
+  23              		.loc 1 17 5 view .LVU4
+  18:variables.c   ****     int             lvar5 = 0x55;
+  24              		.loc 1 18 5 view .LVU5
+  19:variables.c   ****     unsigned int    lvar6 = 0x66;
+  25              		.loc 1 19 5 view .LVU6
+  20:variables.c   ****     long            lvar7 = 0x77;
+  26              		.loc 1 20 5 view .LVU7
+  21:variables.c   ****     unsigned long   lvar8 = 0x88;
+  27              		.loc 1 21 5 view .LVU8
+  22:variables.c   ****     long long       lvar9 = 0x99;
+  28              		.loc 1 22 5 view .LVU9
+  23:variables.c   **** 
+  24:variables.c   ****     return 0;
+  29              		.loc 1 24 5 view .LVU10
+  30              	# variables.c:25: }
+  25:variables.c   **** }...
+  31              		.loc 1 25 1 is_stmt 0 view .LVU11
+  32 0000 31C0     		xorl	%eax, %eax	#
+  33 0002 C3       		ret	
+  34              		.cfi_endproc
+  35              	.LFE11:
+  37              		.globl	gvar9
+  38              		.data
+  39              		.align 8
+  42              	gvar9:
+  43 0000 99000000 		.quad	153
+  43      00000000 
+  44              		.globl	gvar8
+  45              		.align 8
+  48              	gvar8:
+  49 0008 88000000 		.quad	136
+  49      00000000 
+  50              		.globl	gvar7
+  51              		.align 8
+  54              	gvar7:
+  55 0010 77000000 		.quad	119
+  55      00000000 
+  56              		.globl	gvar6
+  57              		.align 4
+  60              	gvar6:
+  61 0018 66000000 		.long	102
+  62              		.globl	gvar5
+  63              		.align 4
+  66              	gvar5:
+  67 001c 55000000 		.long	85
+  68              		.globl	gvar4
+  69              		.align 2
+  72              	gvar4:
+  74              		.globl	gvar3
+  75              		.align 2
+  78              	gvar3:
+  80              		.globl	gvar2
+  83              	gvar2:
+  84 0024 22       		.byte	34
+  85              		.globl	gvar1
+  88              	gvar1:
+  89 0025 11       		.byte	17
+  90              		.text
+  91              	.Letext0:
