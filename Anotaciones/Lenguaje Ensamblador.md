@@ -47,6 +47,19 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 ## Registros
 
+- Son ubicaciones internas de la memoria del procesador, que permiten realizar operaciones sobre datos con mejor desempeño en tiempo de acceso que el ofrecido por la memoria RAM.
+- Almacenan elementos de datos para procesamiento, sin tener que acceder a la memoria.
+- El chip del procesador cuenta con un limitado número de registros construidos dentro de él.
+
+### Tipos de Registros
+
+- Registros de Propósito General:
+    - Registros de Datos.
+    - Registros de Punteros.
+    - Registros de Índices.
+- Registros de Control.
+- Registros de Segmento.
+
 ### Registros x86
 
 - Registros de 32 bits.
