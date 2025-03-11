@@ -47,7 +47,7 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 ## Registros
 
-### Registros X86
+### Registros x86
 
 - Registros de 32 bits.
 - Pueden ser referenciados como enteros de 16 u 8 bits. Por ejemplo:
@@ -83,10 +83,34 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 #### Registros de Propósito General
 
-- Extended Accumulator Register (EAX)
-- Extended Base Register (EBX)
-- Extended Counter Register (ECX)
-- Extended Data Register (EDX)
+##### Extended Accumulator Register (EAX)
+
+```asc
+          +----+----+
+          | AH | AL |
+          +----+----+
+          |   AX    |
++---------+---------+
+|        EAX        |
++-------------------+
+<----- 32 bits ----->
+```
+
+- `eax` generalmente contiene el valor de retorno de la ejecución de una función. Si se observa el registro `eax` justo después de una invocación a función, lo más probable es que contenga el valor de retorno.
+- El uso de `eax` y `edx` se encuentran siempre implicados en las instrucciones de multiplicación y división.
+- `eax` también puede ser usado como una memoria temporal del CPU en sumas:
+
+```asm
+mov [ebp+var_4], 0      ; int a = 0
+mov eax, [ebp+var_4]    ; store local variable var_4 in eax
+add eax, 0Bh            ; add 11 to eax
+mov [ebp+var_4], eax    ; store new content (11+0) into var_4
+```
+
+
+##### Extended Base Register (EBX)
+##### Extended Counter Register (ECX)
+##### Extended Data Register (EDX)
 
 ### Registros X86_64
 
