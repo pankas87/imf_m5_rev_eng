@@ -49,11 +49,58 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 ### Registros X86
 
+- Registros de 32 bits.
+- Pueden ser referenciados como enteros de 16 u 8 bits. Por ejemplo:
+
+```asc
+                          EAX
+|<--------------------- 32 bits ----------------------->|
++------+------+------+------+------+------+------+------+
+| 1010 | 1001 | 1101 | 1100 | 1000 | 0001 | 1111 | 0101 |
+|  A   |  9   |  D   |  C   |  8   |  1   |  F   |  5   |
++------+------+------+------+------+------+------+------+
+
+                                         AX
+                            |<-------- 16 bits -------->|
+                            +------+------+------+------+
+                            | 1000 | 0001 | 1111 | 0101 |
+                            |  8   |  1   |  F   |  5   |
+                            +------+------+------+------+
+
+                                  AH
+                            |<-- 8 bits ->|
+                            +------+------+
+                            | 1000 | 0001 |
+                            |  8   |  1   |
+                            +------+------+
+                                                AL
+                                          |<-- 8 bits ->|
+                                          +------+------+
+                                          | 1111 | 0101 |
+                                          |  F   |  5   |
+                                          +------+------+
+```
+
+#### Registros de Propósito General
+
+- Extended Accumulator Register (EAX)
+- Extended Base Register (EBX)
+- Extended Counter Register (ECX)
+- Extended Data Register (EDX)
+
 ### Registros X86_64
 
 ### Registros ARM
 
 ## Instrucciones
+
+### Manejo de Memoria
+
+| Instrucción | Sintaxis                | Funcionamiento                                                     |
+|-------------|-------------------------|--------------------------------------------------------------------|
+| mov         | mov destination, source | Se usa para mover data hacia los registros o la RAM.               |
+| push        | push value              | Mueve valores hacia la pila (stack).                               |
+| pop         | pop register            | Restaura un valor de la cima de la pila (stack) hacia un registro. |
 
 ### Instrucciones Lógicas
 
@@ -69,28 +116,21 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 |   dst < src  |  0 |  1 |
 |   dst > src  |  0 |  0 |
 
-### Manejo de Memoria
-
-| Instrucción | Sintaxis                | Funcionamiento                                                     |
-|-------------|-------------------------|--------------------------------------------------------------------|
-| mov         | mov destination, source | Se usa para mover data hacia los registros o la RAM.               |
-| push        | push value              | Mueve valores hacia la pila (stack).                               |
-| pop         | pop register            | Restaura un valor de la cima de la pila (stacj) hacia un registro. |
-
 ### Instrucciones que Modifican el Flujo de Ejecución
 
 | Instrucción | Sintaxis                | Funcionamiento                                                                                                             |
 |-------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| jmp         | jmp destination         | Salto incondicional hacia otra sección del código, transfiere el flujo de ejecución al cambiar el puntero de instrucción.  |
-| call        | call destination        | Llamado a una función o procedimiento remoto <sup>2</sup>.                                                                 |
-| jle         | fle destination         | Salto de comparación con signo si en la ejecución de `cmp` el operando de destino es menor o igual que el de origen.       |
+| jmp         | jmp label               | Salto incondicional hacia otra sección del código, transfiere el flujo de ejecución al cambiar el puntero de instrucción.  |
+| call        | call label              | Llamado a una función o procedimiento remoto <sup>2</sup>.                                                                 |
+| jle         | jle label               | Salto de comparación con signo si en la ejecución de `cmp` el operando de destino es menor o igual que el de origen.       |
 
 <sup>2</sup> `call` ejecuta dos operaciones:
     - Empuja la dirección de retorno hacia el stack.
-    - Sambia el `eip` hacia el distino invocado.
+    - Cambia el `eip` hacia el distino invocado.
 
 ## Enlaces de Interés
 
 - Aldeid - Wiki: [x86 Assembly](https://www.aldeid.com/wiki/Category:Architecture/x86-assembly)
 - Unversity of Virnginia - Computer Science: [CS216 - x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
 - Tutorials Point: [Assembly Tutorial](https://www.tutorialspoint.com/assembly_programming/index.htm)
+- Hobart and William Smith Colleges: [x86_64 Registers and Instructions](https://math.hws.edu/eck/cs220/f22/registers.html)
