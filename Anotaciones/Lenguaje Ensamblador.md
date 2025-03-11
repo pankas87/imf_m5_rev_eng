@@ -120,10 +120,55 @@ add eax, 0Bh            ; add 11 to eax
 mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 ```
 
-
 ##### Extended Base Register (EBX)
+
+- Conocido como el Registro Base, pues puede ser empleado en direccionamiento indexado.
+
+```asc
+          +----+----+
+          | BH | BL |
+          +----+----+
+          |   BX    |
++---------+---------+
+|        EBX        |
++-------------------+
+```
+
 ##### Extended Counter Register (ECX)
+
+- Almacenan el contador de loops (ciclos, bucles) en operaciones iterativas.
+
+```asc
+          +----+----+
+          | CH | CL |
+          +----+----+
+          |   CX    |
++---------+---------+
+|        ECX        |
++-------------------+
+```
+
 ##### Extended Data Register (EDX)
+
+- Conocido como el Registro de Datos. Se emplea en las operaciones de entrada y salidad. También se emplea junto con el registro AX para operaciones de multiplicación y división que involucran grandes valores.
+
+```asc
+          +----+----+
+          | DH | DL |
+          +----+----+
+          |   DX    |
++---------+---------+
+|        EDX        |
++-------------------+
+```
+
+#### Registros de Punteros
+
+#### Instruction Pointer (IP)
+
+#### Stack Pointer (SP)
+
+#### Base Pointer (BP)
 
 ### Registros X86_64
 
