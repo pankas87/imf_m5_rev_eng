@@ -98,6 +98,7 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 #### Registros de Datos
 
+[comment:] <> (TODO: Incluir resumen del contenido de TutorialsPoint junto a este contenido.)
 ##### Extended Accumulator Register (EAX)
 
 ```asc
@@ -166,6 +167,9 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 
 #### Registros de Punteros
 
+- Los registros de puntero son los registros EIP, ESP y EBP, de 32 bits, y sus porciones de 16 bits hacia la derecha IP, SP, BP.
+- Existen tres categorías de registros de puntero.
+
 ##### Puntero de Instrucciones (Instruction Pointer) (IP)
 
 ##### Puntero de la Pila (Stack Pointer) (SP)
@@ -190,17 +194,17 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 
 ### Manejo de Memoria
 
-| Instrucción | Sintaxis                | Funcionamiento                                                     |
-|-------------|-------------------------|--------------------------------------------------------------------|
-| mov         | mov destination, source | Se usa para mover data hacia los registros o la RAM.               |
-| push        | push value              | Mueve valores hacia la pila (stack).                               |
-| pop         | pop register            | Restaura un valor de la cima de la pila (stack) hacia un registro. |
+| Instrucción | Sintaxis                  | Funcionamiento                                                     |
+|-------------|---------------------------|--------------------------------------------------------------------|
+| `mov`       | `mov destination, source` | Se usa para mover data hacia los registros o la RAM.               |
+| `push`      | `push value`              | Mueve valores hacia la pila (stack).                               |
+| `pop`       | `pop register`            | Restaura un valor de la cima de la pila (stack) hacia un registro. |
 
 ### Instrucciones Lógicas
 
-| Instrucción | Sintaxis                | Funcionamiento                                                                                                             |
-|-------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| cmp         | cmp destination, source | Se usa para efectuar una comparación. Idéntica a la instrucción sub, sin afectar operandos. Impacta el ZF y CF <sup>1</sup>|
+| Instrucción | Sintaxis                  | Funcionamiento                                                                                                             |
+|-------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `cmp`       | `cmp destination, source` | Se usa para efectuar una comparación. Idéntica a la instrucción sub, sin afectar operandos. Impacta el ZF y CF <sup>1</sup>|
 
 <sup>1</sup> Impacta el Zero Flag y Carry Flag:
 
