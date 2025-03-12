@@ -98,7 +98,14 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 #### Registros de Datos
 
+- Cuatro registros de 32 bits usados para operaciones aritméticas, lógicas, y otras operaciones.
+- Estos registros de 32 bits pueden ser usados de la siguiente forma:
+    - Registros completos de 32 bits: EAX, EBX, ECX, EDX.
+    - Las mitades bajas de los registros de 32 bits se pueden usar como cuatro registros de datos de 16 bits: AX, BX, CX, DX.
+    - Las mitades medias y bajas de los registros de 16 bits mencionados anteriormente pueden ser usados como registros de 8 bits: AH, AL, BH, BL, CH, CL, DH y DL.
+
 [comment:] <> (TODO: Incluir resumen del contenido de TutorialsPoint junto a este contenido.)
+
 ##### Extended Accumulator Register (EAX)
 
 ```asc
