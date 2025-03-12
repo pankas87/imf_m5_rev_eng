@@ -216,11 +216,11 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 
 ### Instrucciones que Modifican el Flujo de Ejecución
 
-| Instrucción | Sintaxis                | Funcionamiento                                                                                                             |
-|-------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| jmp         | jmp label               | Salto incondicional hacia otra sección del código, transfiere el flujo de ejecución al cambiar el puntero de instrucción.  |
-| call        | call label              | Llamado a una función o procedimiento remoto <sup>2</sup>.                                                                 |
-| jle         | jle label               | Salto de comparación con signo si en la ejecución de `cmp` el operando de destino es menor o igual que el de origen.       |
+| Instrucción --| Sintaxis                  | Funcionamiento                                                                                                             |
+|---------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| `jmp`         | `jmp label`               | Salto incondicional hacia otra sección del código, transfiere el flujo de ejecución al cambiar el puntero de instrucción.  |
+| `call`        | `call label`              | Llamado a una función o procedimiento remoto <sup>2</sup>.                                                                 |
+| `jle`         | `jle label`               | Salto de comparación con signo si en la ejecución de `cmp` el operando de destino es menor o igual que el de origen.       |
 
 <sup>2</sup> `call` ejecuta dos operaciones:
     - Empuja la dirección de retorno hacia el stack.
