@@ -164,11 +164,17 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 
 ### Registros de Punteros
 
-### Instruction Pointer (IP)
+#### Instruction Pointer (IP)
 
-### Stack Pointer (SP)
+#### Stack Pointer (SP)
 
-### Base Pointer (BP)
+#### Base Pointer (BP)
+
+### Registros de Índices
+
+#### Source Index (SI)
+
+#### Destination Index (DI)
 
 ## Registros X86_64
 
