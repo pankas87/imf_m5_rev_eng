@@ -96,7 +96,9 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 ### Registros de Propósito General
 
-#### Extended Accumulator Register (EAX)
+#### Registros de Datos
+
+##### Extended Accumulator Register (EAX)
 
 ```asc
           +----+----+
@@ -120,7 +122,7 @@ add eax, 0Bh            ; add 11 to eax
 mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 ```
 
-#### Extended Base Register (EBX)
+##### Extended Base Register (EBX)
 
 - Conocido como el Registro Base, pues puede ser empleado en direccionamiento indexado.
 
@@ -134,7 +136,7 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 +-------------------+
 ```
 
-#### Extended Counter Register (ECX)
+##### Extended Counter Register (ECX)
 
 - Almacenan el contador de loops (ciclos, bucles) en operaciones iterativas.
 
@@ -148,7 +150,7 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 +-------------------+
 ```
 
-#### Extended Data Register (EDX)
+##### Extended Data Register (EDX)
 
 - Conocido como el Registro de Datos. Se emplea en las operaciones de entrada y salidad. También se emplea junto con el registro AX para operaciones de multiplicación y división que involucran grandes valores.
 
@@ -162,19 +164,23 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 +-------------------+
 ```
 
-### Registros de Punteros
+#### Registros de Punteros
 
-#### Instruction Pointer (IP)
+##### Puntero de Instrucciones (Instruction Pointer) (IP)
 
-#### Stack Pointer (SP)
+##### Puntero de la Pila (Stack Pointer) (SP)
 
-#### Base Pointer (BP)
+##### Puntero Base (Base Pointer) (BP)
 
-### Registros de Índices
+#### Registros de Índices
 
-#### Source Index (SI)
+##### Source Index (SI)
 
-#### Destination Index (DI)
+##### Destination Index (DI)
+
+### Registros de Control
+
+### Registros de Segmento
 
 ## Registros X86_64
 
