@@ -199,6 +199,8 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
 
 ## Instrucciones
 
+Las instrucciones son comandos ejecutados por el procesador en tiempo de ejecución.
+
 ### Manejo de Memoria
 
 | Instrucción | Sintaxis                  | Funcionamiento                                                     |
@@ -233,9 +235,14 @@ mov [ebp+var_4], eax    ; store new content (11+0) into var_4
     - Empuja la dirección de retorno hacia el stack.
     - Cambia el `eip` hacia el distino invocado.
 
+## Directivas
+
+Ubicadas en archivos *.s, son instrucciones empleadas por el ensamblador para contolar el proceso de ensamblado. Todas las directivas de ensamblado comienzan con un punto.
+
 ## Enlaces de Interés
 
 - Aldeid - Wiki: [x86 Assembly](https://www.aldeid.com/wiki/Category:Architecture/x86-assembly)
 - Unversity of Virnginia - Computer Science: [CS216 - x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
 - Tutorials Point: [Assembly Tutorial](https://www.tutorialspoint.com/assembly_programming/index.htm)
 - Hobart and William Smith Colleges: [x86_64 Registers and Instructions](https://math.hws.edu/eck/cs220/f22/registers.html)
+- Oracle - x86 Assembly Language Reference Manual: [Assembler Directives](https://docs.oracle.com/cd/E26502_01/html/E28388/eoiyg.html)
