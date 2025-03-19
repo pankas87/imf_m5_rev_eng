@@ -86,6 +86,9 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
             - Source Index (`ESI`, `SI`): Se usa como índice de origen para operaciones sobre cadenas de texto.
             - Destination Index (`EDI`, `DI`): Se usa como índice de destino para operaciones sobre cadenas de texto.
 - Registros de Control.
+    - Los punteros de instrucción de 32 bits y los registros de flags de 32 bits, combinados, son considerados los registros de control.
+    - Muchas instrucciones involucran comparaciones y cálculos matemáticos y cambian el estado de las flags.
+    - Instrucciones condicionales revisan el valor de las flags de estado para cambiar el flujo de ejecución hacia otra ubicación.
 - Registros de Segmento.
 
 ## Registros x86
@@ -264,3 +267,6 @@ Las instrucciones son comandos ejecutados por el procesador en tiempo de ejecuci
 - Tutorials Point: [Assembly Tutorial](https://www.tutorialspoint.com/assembly_programming/index.htm)
 - Hobart and William Smith Colleges: [x86_64 Registers and Instructions](https://math.hws.edu/eck/cs220/f22/registers.html)
 - GNU: [GNU Assembler Manual](https://ftp.gnu.org/old-gnu/Manuals/gas/html_chapter/as_toc.html)
+- Stack Overflow: [int 0x80 - Interrupt](https://stackoverflow.com/questions/1817577/what-does-int-0x80-mean-in-assembly-code)
+- Stack Overflow: [db instruction](https://stackoverflow.com/questions/17387492/what-does-the-assembly-instruction-db-actually-do)
+- Github: [x86 Assembly Cheatsheet](https://github.com/cirosantilli/x86-assembly-cheat/)
