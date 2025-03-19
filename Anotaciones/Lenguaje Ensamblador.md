@@ -67,7 +67,24 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
             - También se usa en operaciones de entrada y salida.
             - Se usa en conjunto con el registro `AX` para operaciones de multiplicación y división que involucran valores grande.
     - Registros de Punteros.
+        - Registros de 32 bits `EIP`, `ESP` y `EBP` y sus porciones de 16 bits correspondientes `IP`, `SP`, `BP`.
+            - Instruction Pointer (`EIP`, `IP`):
+                - El registro de 16 bits `IP` contiene el offset de dirección de la próxima instrucción a ser ejecutada. 
+                - `IP` en asociación con el registro `CS` (Code Segment) (`CS:IP`) entrega la dirección completa de la instrucción actual en el segmento de código.
+            - Stack Pointer (`ESP`, `SP`):
+                - El registro de 16 bits `SP` provee el valor de offset dentro de la pila del programa (Program stack).
+                - `SP` en asociación con el registro `SS` (Stack Segment) (`SS:SP`) refiere a la posición actual de datos o dirección de ejecución dentro de la pila del programa.
+            - Base Pointer (`EBP`, `BP`):
+                - El registro de 16 bits `BP` principalmente asiste en referencia parámetros variables pasados a una subrutina.
+                - La dirección en el registro `SS` se combina con el offset en `BP` para obtener la ubicación de un parámetro.
+                - `BP` también puede combinarse con `DI` y `SI` como un registro base para direccionamiento especial (?).
     - Registros de Índices.
+        - Registros de índices de 32 bits, `ESI` y `EDI`; y sus porciones de 16 bits a la derecha, `SI` y `DI`.
+        - Se usan para direccionamiento de memoria indexado
+        - Ocasionalmente se usan en adición y sustracción.
+        - Dos conjuntos:
+            - Source Index (`ESI`, `SI`): Se usa como índice de origen para operaciones sobre cadenas de texto.
+            - Destination Index (`EDI`, `DI`): Se usa como índice de destino para operaciones sobre cadenas de texto.
 - Registros de Control.
 - Registros de Segmento.
 
@@ -190,22 +207,6 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 - Los registros de puntero son los registros EIP, ESP y EBP, de 32 bits, y sus porciones de 16 bits hacia la derecha IP, SP, BP.
 - Existen tres categorías de registros de puntero.
-
-##### Puntero de Instrucciones (Instruction Pointer) (IP)
-
-##### Puntero de la Pila (Stack Pointer) (SP)
-
-##### Puntero Base (Base Pointer) (BP)
-
-#### Registros de Índices
-
-##### Source Index (SI)
-
-##### Destination Index (DI)
-
-### Registros de Control
-
-### Registros de Segmento
 
 ## Registros X86_64
 
