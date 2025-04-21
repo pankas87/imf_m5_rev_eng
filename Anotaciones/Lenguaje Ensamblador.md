@@ -213,6 +213,18 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 
 ## Registros X86_64
 
+| Registro | Aliases/Sub‑partes                 | Uso Típico                                        |
+|----------|------------------------------------|---------------------------------------------------|
+| `rax`    | `eax`, `ax`, `ah/al`               | Accumulator (mul, div, IO ops)                    |
+| `rbx`    | `ebx`, `bx`, `bh/bl`               | Base pointer (callee‑saved)                       |
+| `rcx`    | `ecx`, `cx`, `ch/cl`               | Counter (loop, shift counts)                      |
+| `rdx`    | `edx`, `dx`, `dh/dl`               | I/O, mul/div, varargs                             |
+| `rdi`    | `edi`, `di`                        | 1st arg in SysV ABI; string ops                   |
+| `rsi`    | `esi`, `si`                        | 2nd arg in SysV ABI; string ops                   |
+| `rbp`    | `ebp`                              | Frame pointer (callee‑saved)                      |
+| `rsp`    | `esp`                              | Stack pointer (always aligned)                    |
+| `r8–r15` | `r8d–r15d`, `r8w–r15w`, `r8b–r15b` | Additional temps, arguments (3rd–8th in SysV ABI) |
+
 ## Registros ARM
 
 ## Instrucciones
@@ -223,7 +235,8 @@ Las instrucciones son comandos ejecutados por el procesador en tiempo de ejecuci
 
 | Instrucción | Sintaxis                  | Funcionamiento                                                     |
 |-------------|---------------------------|--------------------------------------------------------------------|
-| `mov`       | `mov destination, source` | Se usa para mover data hacia los registros o la RAM.               |
+| `mov`       | `mov destination, source` | Se usa para copiar (mover) data hacia los registros o la RAM.      |
+| `movq`      | `movq destination, source`| Copia un valor quadword del operando fuente al operando destino    |
 | `push`      | `push value`              | Mueve valores hacia la pila (stack).                               |
 | `pop`       | `pop register`            | Restaura un valor de la cima de la pila (stack) hacia un registro. |
 
