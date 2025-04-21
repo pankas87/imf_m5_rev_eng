@@ -10,6 +10,7 @@
 >   # Archivos generados:
 >   gcc -v -save-temps loop.c
 >
+>
 >   # Compilación incluyengo información de depuración (debugging)
 >   gcc -g loop.c -o loop
 >
@@ -20,6 +21,9 @@
 >
 >   # Generar código ensamblador
 >   gcc -S variables.c
+>
+>   # Generar código ensamblador, sintaxis Intel
+>   gcc -S -masm=intel variables.c
 >
 >   # Generar código ensamblador, manteniendo referencia a líneas de código fuente originales en C
 >   gcc -S -fverbose-asm -g -O2 variables.c -o variables_m_64_verbose.s
