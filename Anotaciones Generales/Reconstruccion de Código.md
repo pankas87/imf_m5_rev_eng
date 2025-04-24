@@ -55,5 +55,3 @@
 - Linux Handbook: [GCC Flags](https://linuxhandbook.com/gcc-flags/)
 - Kali Linux Docs: [GCC - ARM Cross Compilation Environment](https://www.kali.org/docs/development/arm-cross-compilation-environment/)
 - VisualGDB: [GDB - Reference - Commands](https://visualgdb.com/gdbreference/commands/)
-
-# Estructuras de Datos

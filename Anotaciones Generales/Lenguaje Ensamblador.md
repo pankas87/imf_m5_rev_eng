@@ -1,5 +1,9 @@
 # Lenguaje Ensamblador
 
+## Ruta de Aprendizaje
+
+- 
+
 ## Tipos de datos
 
 ### x86 (32 bits)
@@ -254,7 +258,7 @@ Las instrucciones son comandos ejecutados por el procesador en tiempo de ejecuci
 |   dst < src  |  0 |  1 |
 |   dst > src  |  0 |  0 |
 
-### Instrucciones que Modifican el Flujo de Ejecución
+### Instrucciones de Control de Flujo
 
 | Instrucción   | Sintaxis                  | Funcionamiento                                                                                                             |
 |---------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -267,11 +271,13 @@ Las instrucciones son comandos ejecutados por el procesador en tiempo de ejecuci
     - Cambia el `eip` hacia el distino invocado.
 
 ## Directivas
+### TODO: Expandir sobre las directivas
 
 - Instrucciones empleadas por el ensamblador para contolar el proceso de ensamblado.
 - Todas las directivas de ensamblado comienzan con un punto.
 - También conocidas como pseudo-ops (pseudo operaciones), puesto que no generan directamente código de máquina ejecutable.
 - Ubicadas en archivos *.s
+
 
 ## Enlaces de Interés
 
@@ -283,3 +289,4 @@ Las instrucciones son comandos ejecutados por el procesador en tiempo de ejecuci
 - Stack Overflow: [int 0x80 - Interrupt](https://stackoverflow.com/questions/1817577/what-does-int-0x80-mean-in-assembly-code)
 - Stack Overflow: [db instruction](https://stackoverflow.com/questions/17387492/what-does-the-assembly-instruction-db-actually-do)
 - Github: [x86 Assembly Cheatsheet](https://github.com/cirosantilli/x86-assembly-cheat/)
+- ARM: [ARM Developer Portal and Documentation](https://developer.arm.com/documentation)
