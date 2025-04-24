@@ -1,0 +1,17 @@
+# Instrucciones, Registros de CPU y Tipos de Datos
+
+## Instrucciones
+
+Una **instrucción** en lenguaje ensamblador es un **comando de bajo nivel** hacia la CPU. Típicamente consiste de:
+
+```cpp
+   [Label:] nmemonic operand1, operand2; optional comment
+```
+
+En sintaxis Intel el formato siempre es
+
+```bash
+   operation destination, source
+```
+
+
