@@ -34,11 +34,7 @@ En las arquitecturas de 64 bits hay varias opciones y cada compilador opta por u
 | `long long` | N/A   | 64      | 64   | 64    | 64    |
 | `pointer`   | 32    | 32      | 64   | 64    | 64    |
 
-## Sintaxis y Operandos
-
-Una instrucción puede contener 0, 1, 2 y 3 operandos.
-
-### Tamaños de Palabra
+## Tamaños de Palabra
 
 | Nombre         | Identificador   | Tamaño              |
 |----------------|-----------------|---------------------|
@@ -46,8 +42,6 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 | Double Word    | `DWORD`         | 4 bytes (32 buts)   |
 | Quadruple Word | `QWORD`         | 8 bytes (64 bits)   |
 | Paragraph      |                 | 16 bytes (128 bits) |
-
-### Operandos
 
 ## Registros
 
@@ -211,6 +205,7 @@ Una instrucción puede contener 0, 1, 2 y 3 operandos.
 >```
 
 #### Registros de Punteros
+#### TODO: Pendiente elaborar
 
 - Los registros de puntero son los registros EIP, ESP y EBP, de 32 bits, y sus porciones de 16 bits hacia la derecha IP, SP, BP.
 - Existen tres categorías de registros de puntero.
