@@ -14,7 +14,7 @@
     # Compilación incluyengo información de depuración (debugging)
     gcc -g loop.c -o loop
 
-    # Compilación adaptando el nivel de optimización para debugging
+    # Compilación adaptando el nivel de optimización
     gcc -g -Og loop.c -o loop
 
     # Compilación seleccionando el dialecto de lenguaje ensamblador
@@ -54,7 +54,19 @@
   disassemble main
 ```
 
-### Análisis, Breakpoints, Control 
+### Análisis, Breakpoints, Control
+
+```bash
+  # Inicializando un breakpoint y ejecutando el programa
+  break main
+  run
+
+  # Moverse una instrucción, usar `ni` para la siguiente instrucción
+  si
+
+  # Imprimir los valores actuales de los registros
+  info registers
+```
 
 ## Enlaces de interés
 
