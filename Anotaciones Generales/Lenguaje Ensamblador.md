@@ -49,45 +49,52 @@ En las arquitecturas de 64 bits hay varias opciones y cada compilador opta por u
 - Almacenan elementos de datos para procesamiento, sin tener que acceder a la memoria.
 - El chip del procesador cuenta con un limitado número de registros construidos dentro de él.
 
-### Tipos de Registros
+### Categorías de Registros
+
+#### 1. de Propósito General
 
 - Registros de Propósito General:
     - Registros de Datos.
-        - `AX`
+        - `rax`, `eax`, `ax`
             - El acumulador primario. Se usa en operaciones de entrada y salida y en la mayoría de instrucciones aritméticas.
             - Por ejemplo, en la operación de multiplicación, un operando es almacenado en el registro EAX, AX o AL según el tamaño del operando.
-        - `BX`
+        - `rbx`, `ebx`, `bx`
             - Conocido como el registro base, ya que puede ser usado para direccionamiento de memoria indexado.
-        - `CX`
+        - `rcx`, `ecx`, `cx`
             - Conocido como el registro de conteo, almacenan el conteo de un bucle en operaciones iterativas.
-        - `DX`
+        - `rdx`, `edx`, `dx`
             - Conocido como el registro de datos.
             - También se usa en operaciones de entrada y salida.
-            - Se usa en conjunto con el registro `AX` para operaciones de multiplicación y división que involucran valores grande.
+            - Se usa en conjunto con el registro `ax` para operaciones de multiplicación y división que involucran valores grande.
     - Registros de Punteros.
-        - Registros de 32 bits `EIP`, `ESP` y `EBP` y sus porciones de 16 bits correspondientes `IP`, `SP`, `BP`.
-            - Instruction Pointer (`EIP`, `IP`):
-                - El registro de 16 bits `IP` contiene el offset de dirección de la próxima instrucción a ser ejecutada. 
-                - `IP` en asociación con el registro `CS` (Code Segment) (`CS:IP`) entrega la dirección completa de la instrucción actual en el segmento de código.
-            - Stack Pointer (`ESP`, `SP`):
-                - El registro de 16 bits `SP` provee el valor de offset dentro de la pila del programa (Program stack).
-                - `SP` en asociación con el registro `SS` (Stack Segment) (`SS:SP`) refiere a la posición actual de datos o dirección de ejecución dentro de la pila del programa.
-            - Base Pointer (`EBP`, `BP`):
-                - El registro de 16 bits `BP` principalmente asiste en referencia parámetros variables pasados a una subrutina.
-                - La dirección en el registro `SS` se combina con el offset en `BP` para obtener la ubicación de un parámetro.
-                - `BP` también puede combinarse con `DI` y `SI` como un registro base para direccionamiento especial (?).
+        - Registros de 32 bits `eip`, `esp` y `ebp` y sus porciones de 16 bits correspondientes `ip`, `sp`, `bp`.
+            - Instruction Pointer (`eip`, `ip`):
+                - El registro de 16 bits `ip` contiene el offset de dirección de la próxima instrucción a ser ejecutada. 
+                - `ip` en asociación con el registro `cs` (Code Segment) (`cs:ip`) entrega la dirección completa de la instrucción actual en el segmento de código.
+            - Stack Pointer (`esp`, `sp`):
+                - El registro de 16 bits `sp` provee el valor de offset dentro de la pila del programa (Program stack).
+                - `sp` en asociación con el registro `ss` (Stack Segment) (`ss:sp`) refiere a la posición actual de datos o dirección de ejecución dentro de la pila del programa.
+            - Base Pointer (`ebp`, `bp`):
+                - El registro de 16 bits `bp` principalmente asiste en referencia parámetros variables pasados a una subrutina.
+                - La dirección en el registro `ss` se combina con el offset en `bp` para obtener la ubicación de un parámetro.
+                - `bp` también puede combinarse con `DI` y `SI` como un registro base para direccionamiento especial (?).
     - Registros de Índices.
-        - Registros de índices de 32 bits, `ESI` y `EDI`; y sus porciones de 16 bits a la derecha, `SI` y `DI`.
+        - Registros de índices de 32 bits, `esi` y `edi`; y sus porciones de 16 bits a la derecha, `si` y `di`.
         - Se usan para direccionamiento de memoria indexado
         - Ocasionalmente se usan en adición y sustracción.
         - Dos conjuntos:
-            - Source Index (`ESI`, `SI`): Se usa como índice de origen para operaciones sobre cadenas de texto.
-            - Destination Index (`EDI`, `DI`): Se usa como índice de destino para operaciones sobre cadenas de texto.
-- Registros de Control.
+            - Source Index (`esi`, `si`): Se usa como índice de origen para operaciones sobre cadenas de texto.
+            - Destination Index (`edi`, `di`): Se usa como índice de destino para operaciones sobre cadenas de texto.
+
+## 2. Registros de Segmento.
+
+## 3. Registros de Control.
     - Los punteros de instrucción de 32 bits y los registros de flags de 32 bits, combinados, son considerados los registros de control.
     - Muchas instrucciones involucran comparaciones y cálculos matemáticos y cambian el estado de las flags.
     - Instrucciones condicionales revisan el valor de las flags de estado para cambiar el flujo de ejecución hacia otra ubicación.
-- Registros de Segmento.
+
+## 4. Registros de Flags.
+
 
 ## Instrucciones
 
