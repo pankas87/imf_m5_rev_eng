@@ -87,14 +87,16 @@ En las arquitecturas de 64 bits hay varias opciones y cada compilador opta por u
             - Destination Index (`edi`, `di`): Se usa como índice de destino para operaciones sobre cadenas de texto.
 
 ## 2. Registros de Segmento.
+## TODO: Contenido ChatGPT
 
 ## 3. Registros de Control.
+## TODO: Contenido ChatGPT
     - Los punteros de instrucción de 32 bits y los registros de flags de 32 bits, combinados, son considerados los registros de control.
     - Muchas instrucciones involucran comparaciones y cálculos matemáticos y cambian el estado de las flags.
     - Instrucciones condicionales revisan el valor de las flags de estado para cambiar el flujo de ejecución hacia otra ubicación.
 
 ## 4. Registros de Flags.
-
+## TODO: Contenido ChatGPT
 
 ## Instrucciones
 
